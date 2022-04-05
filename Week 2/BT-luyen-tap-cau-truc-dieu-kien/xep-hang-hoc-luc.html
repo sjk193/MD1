@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt('Nhap diem bai kiem tra: '));
+        var b = parseInt(prompt('Nhap diem thi giua ki: '));
+        var c = parseInt(prompt('Nhap diem thi cuoi ki: '));
+        var tb = ( a + b * 2 + c * 3 ) / 6;
+        if (tb >= 9.0) {
+            alert ('Hạng A')
+        } else if (tb >= 7.0 && tb < 9.0) {
+            alert ('Hạng B')
+        } else if (tb >= 5.0 && tb < 7.0) {
+            alert ('Hạng C')
+        } else if (tb >= 3.0 && tb < 5.0) {
+            alert ('Hạng D')
+        } else {
+            alert ('Hạng F');
+        }
+    </script>
+</body>
+</html>

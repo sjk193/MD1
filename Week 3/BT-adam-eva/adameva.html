@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Apple = function(){
+            this.weight = 10 ;
+            this.getWeigh = function(){
+                return this.weight;
+            }
+        }
+        let Human = function(name,gender,weight){
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.say = function(string){
+                console.log(string);
+            }
+            this.eat = function(Apple){
+                if(Apple.weight > 0){
+                    this.weight += 1;
+                    Apple.weight -= 1;
+                }else{
+                    return false;
+                }
+            }
+            this.checkApple = function(Apple){
+                return Apple.getWeigh();
+            }
+            this.getName = function(){
+                return this.name;
+            }
+            this.getGender = function(){
+                return this.gender;
+            }
+            this.getWeigh = function(){
+                return this.weight;
+            }
+        }
+        let apple = new Apple();
+        let human = new Human("Human","Male",50);
+        human.eat(apple);
+        human.eat(apple);
+        human.eat(apple);
+        human.eat(apple);
+        console.log(human.getWeigh());
+        console.log(human.checkApple(apple));
+    </script>
+</body>
+</html>

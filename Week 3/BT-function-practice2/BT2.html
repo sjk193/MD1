@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function circle_area(radius){
+            let area = (Math.pow(radius,2) * 3.14);
+            return area.toFixed(2);
+        }
+        function circle_perimeter(radius){
+            let perimeter = 2*radius*3.14;
+            return perimeter.toFixed(2);
+        }
+        let radius_input = 1;
+        alert(`Với bán kính là ${radius_input}, diện tích hình tròn là ${circle_area(radius_input)}, chu vi là ${circle_perimeter(radius_input)}`);
+    </script>
+</body>
+</html>

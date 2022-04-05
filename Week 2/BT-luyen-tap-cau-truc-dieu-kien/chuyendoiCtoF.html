@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Celsius To Fahrenheit</title>
+</head>
+<body>
+    <input id="idtext" type="text">
+    <button onclick="CToF()">Chuyen doi</button>
+    <script>
+        function CToF() {
+            var a = document.getElementById("idtext").value;
+            var Ctemp = parseInt(a);
+            var CToF = Ctemp *  9 / 5 + 32;
+            alert("Gia tri do F la: " + CToF);
+        }
+    </script>
+</body>
+</html>

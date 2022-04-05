@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bien va du lieu</title>
+</head>
+<body>
+    <script>
+        let inputphysics;
+        let inputmath;
+        let inputbiological;
+            inputphysics = prompt("Enter point physics");
+            inputmath = prompt("Enter point math");
+            inputbiological = prompt("Enter point biological");
+            let physics = parseInt(inputphysics);
+            let math =  parseInt(inputmath);  
+            let biological = parseInt(inputbiological);
+            let mediumscore = (math + physics + biological)/3;
+            let totalscore = math + physics + biological;
+                alert("Điểm trung bình = " + mediumscore); 
+                alert("Tổng điểm = " + totalscore);
+    </script>
+    <script>
+        let inputC;
+            inputC = prompt("Độ C");
+        let F = 9/5*(inputC) +32;
+            alert(inputC + "Độ C bằng: " + F + "Độ F: " )
+    </script>
+    <script>
+        let bankinh;
+        let pi = 3.14;
+            bankinh = prompt("Bán kính là");
+            dientich = pi * (Math.pow(bankinh,2));
+            chuvi = pi * (2*bankinh);
+            alert("Diện Tích hình tròn: " + dientich + "Chu vi hình tròn:" + chuvi);
+    </script>
+</body>
+</html>

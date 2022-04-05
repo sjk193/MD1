@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       // var i = 10;
+       // i++;
+       // var chuoi ='Gia tri bien:' + i;
+       // var chuoi = chuoi + i;
+       // alert ('Gia tri bien:' + i);
+       //var check 1 = false;
+       //var check 2 = true;
+       //check = check 1 + check 2;
+       //z = 10;
+       //console.log ('Gia tri z' ,z);
+       
+
+    </script>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="text" id="idGiatriA" value = "2"><input type="text" id ="idGiatriB" value = "5"><br>
+    <button type="button" onclick="tinhtong()">+</button><button type="button">-</button>
+    
+</body>
+    <!-- <script> -->
+        <!-- var a = document.getElementById("idGiatriA"),value;
+        var b = document.getElementById("idGiatriB"),value;
+       console.log ("Giatri a",a);
+       console.log ("Giatri b",b);
+       var tong = a+b;
+       alert ("Tong bang: " + tong);
+       var tong = TinhTongAB(a,b);
+       var tong1 = TinhTongAB(10,11);
+    </script> -->
+    <script>
+        function tinhTongAB(a,b) {
+            return a+b;
+        }
+        function tinhtong() {
+            var a = document.getElementById("idGiatriA").value;
+            var b = document.getElementById("idGiatriB").value;
+            console.log ("Giatri a",a);
+            console.log ("Giatri b",b);
+            var tong = tinhTongAB(parseInt(a),parseInt(b) );
+            console.log ("Tong bang: " + tong);
+        }
+        
+    </script>
+   
+</html>

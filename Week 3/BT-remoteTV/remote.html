@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let TiVi = function(channel_is_playing,volume){
+            this.channel_is_playing = channel_is_playing;
+            this.volume = volume;
+            this.status = false;
+            this.get_change_the_channel = function(){
+                if(this.status){
+                    console.log(this.channel_is_playing);
+                }else {
+                    console.log("You need turn on TV");
+                }
+            }
+            this.get_volume = function(){
+                if(this.status){
+                    console.log("Volume = " + this.volume);
+                }else {
+                    console.log("You need turn on TV");
+                }
+            }
+            this.set_change_the_channel = function(change_the_channel){
+                if(this.status){
+                    return this.channel_is_playing = change_the_channel;
+                }else {
+                    console.log("You need turn on TV");
+                }
+            }
+            this.set_volume = function(volume_unit){
+                if(this.status){
+                    if(volume <= 100 && volume >= 0){
+                        return this.volume += volume_unit;
+                    }else {
+                        console.log("Volume max = 100,min = 0");
+                    }
+                }else {
+                    console.log("You need turn on TV");
+                }
+            }
+            this.turn_on = function(){
+                return this.status = true;
+            }
+            this.turn_off = function(){
+                return this.status = false;
+            }
+        }
+        let Remote = function(id_tivi){
+            this.id = id_tivi;
+            this.set_change_the_channel_tivi = function(change_the_channel){
+                return (this.id).set_change_the_channel(change_the_channel);
+            }
+            this.set_volume_tivi = function (volume){
+                return (this.id).set_volume(volume);
+            }
+            this.turn_on_tivi = function(){
+                return (this.id).turn_on();
+            }
+            this.turn_off_tivi = function(){
+                return (this.id).turn_off();
+            }
+            this.get_change_the_channel_tivi = function(){
+                return (this.id).get_change_the_channel();
+            }
+            this.get_volume_tivi = function(){
+                return (this.id).get_volume();
+            }
+        }
+        let tivi = new TiVi("channel 7",70);
+        let remote = new Remote(tivi);
+        remote.turn_on_tivi();
+        remote.get_change_the_channel_tivi();
+        remote.get_volume_tivi();
+        remote.set_change_the_channel_tivi("channel 3");
+        remote.set_volume_tivi(2);
+        remote.get_change_the_channel_tivi();
+        remote.get_volume_tivi();
+        remote.turn_off_tivi();
+        remote.get_change_the_channel_tivi();
+    </script>
+</body>
+</html>

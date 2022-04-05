@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau lenh switch case</title>
+</head>
+<body>
+    <input type="text" id="Thang" value =''>
+    <button type="button" onclick="Tinhsongay()">Tính số ngày</button>
+    <script>
+        var c = a*b;
+        switch(b) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:  
+            case 12: 
+                a = 31; 
+                alert ('Thang co ' +c +'ngay');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                a = 30;
+                alert ('Thang co ' +c +'ngay');
+                break;
+            case 2:
+                a = 28;
+                alert ('Thang co ' +c +'ngay');                  
+        }    
+        
+        function Tinhsongay() {
+            var b = document.getElementById('Thang').value;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p><label for="">Tiếng Anh</label><input type="text" name="" id="english"></p>
+        <p><label for="">Tiếng Việt</label><input type="text" name="" id="vietnammese" disabled></p>
+        <button onclick="Show()" type="button">Dịch</button>
+        <button onclick="Clear()" type="button">Xóa</button>
+    </div>
+    <script>   
+        function Show(){
+            let english = ["hello","sorry","name"];
+            let vietnammese = ["xin chào","xin lỗi","tên"];
+            let english_value = document.getElementById("english").value;
+            let vietnammese_value = document.getElementById("vietnammese");
+            let i;
+            let flag = 0;
+            let result;
+            for(i = 0; i < english.length ; i++){
+                if(english_value == english[i]){
+                    flag = 1;
+                    result = i;
+                }
+            }
+            if(flag == 1){
+                vietnammese_value.value = vietnammese[result];
+            }else {
+                alert("Từ này không có trong từ điển");
+            }
+        }
+        function Clear() {
+            (document.getElementById("english")).value = "";
+            (document.getElementById("vietnammese")).value = "";
+        }
+    </script>
+</body>
+</html>

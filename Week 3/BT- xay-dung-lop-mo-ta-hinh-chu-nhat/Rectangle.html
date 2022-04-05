@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="500" height="500" style="border: 2px solid red;"></canvas>
+    <script>
+        let Rectangle = function(length,width){
+            this.length = length;
+            this.width = width;
+            this.getAcreage = function(){
+                return this.length*this.width;
+            }
+            this.getPerimeter = function(){
+                return (this.length + this.width)*2;
+            }
+            this.getDisplay = function(){
+                var c = document.getElementById("my_canvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.rect(100, 100,this.width, this.length);
+                ctx.fill();
+            }
+            this.setLength = function(length_value){
+                this.length = length_value;
+            }
+            this.setWidth = function(width_value){
+                this.width = width_value;
+            }
+        }
+        let rec = new Rectangle(100,100);
+        rec.getDisplay();
+        rec.setLength(200);
+        rec.setWidth(200);
+        rec.getDisplay();
+        alert(`Diện tích : ${rec.getAcreage()}, Chu vi : ${rec.getPerimeter()}`);
+    </script>
+</body>
+</html>

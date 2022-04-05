@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Temperature = function(celcius){
+            this.celcius = celcius;
+            this.celcius_To_Fahrenheit = function(){
+                return (9/5*this.celcius) + 32;
+            }
+            this.celcius_To_Kelvin = function(){
+                return this.celcius + 273.15;
+            }
+        }
+        let temperature = new Temperature(25);
+        alert(`${temperature.celcius} C = ${temperature.celcius_To_Fahrenheit()} F,${temperature.celcius} C = ${temperature.celcius_To_Kelvin()} K`)
+    </script>
+</body>
+</html>

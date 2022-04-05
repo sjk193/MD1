@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<Script>
+    var array = [12, 35, 1, 2, 5, 47, 8, 10, 7, 6];
+    var V = Number(prompt("Nhập vào giá trị cần tìm:"));
+    var flag;
+    for (let i = 0; i < array.length; i++) {
+            if (V == array[i]) {
+                array.splice(i, 1);
+                array[array.length - 1] = 0;
+            }
+            else{
+                flag=0
+            }
+        }
+        if(flag==0){
+            console.log("Không có giá trị trong V trong mảng")
+        }
+        console.log(array); 
+</Script>
+    </body>
+
+</html>

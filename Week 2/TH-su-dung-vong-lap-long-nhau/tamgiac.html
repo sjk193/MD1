@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let a,i,j;
+        a = "<table>"
+        //a = "<table border='1' width='200' cellspacing='0' cellpadding='4'>" ;
+        for ( i = 1; i<=5; i++) {
+            a = a + "<tr>";
+                for (j = 1; j <= i; j++) {
+                a = a + "<td>" + "*" + "</td>";
+            }
+            a = a + "</tr>";
+        }
+        a = a + "</table>";
+        document.write(a); 
+    </script>
+    <br>
+    <br>
+    <script>
+       a = "<table>"
+        //a = "<table border='1' width='200' cellspacing='0' cellpadding='4'>" ;
+        for ( i = 5; i>=1; i--) {
+            a = a + "<tr>";
+                for (j = 1 ; j <= i; j++) {
+                a = a + "<td>" + "*" + "</td>";
+            }
+            a = a + "</tr>";
+        }
+        a = a + "</table>";
+        document.write(a); 
+    </script>
+    <br>
+    <script>
+        a = "<table>"
+         //a = "<table border='1' width='200' cellspacing='0' cellpadding='4'>" ;
+         for ( i = 0; i<=5; i++) {
+             a = a + "<tr>";
+                 for (j = 1 ; j <= 5-i; j++) {
+                 a = a + "<td>" + "&nbsp" + "</td>";
+             }
+             for(j = 1; j<=i; j++) {
+                a = a + "<td>" + "*" + "</td>"
+             }
+             a = a + "</tr>";
+             
+        }
+         a = a + "</table>";
+         document.write(a); 
+     </script>
+     <br>
+     <br>
+     <script>
+         a = "<table>"
+          //a = "<table border='1' width='200' cellspacing='0' cellpadding='4'>" ;
+          for ( i = 5; i>=0; i--) {
+              a = a + "<tr>";
+                  for (j = 1 ; j <= 5-i; j++) {
+                  a = a + "<td>" + "&nbsp" + "</td>";
+              }
+              for(j = 1; j<=i; j++) {
+                 a = a + "<td>" + "*" + "</td>"
+              }
+              a = a + "</tr>";
+              
+         }
+          a = a + "</table>";
+          document.write(a); 
+      </script>
+</body>
+</html>

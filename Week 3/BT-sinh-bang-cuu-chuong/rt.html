@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // let i = 0;
+        // while ( i < 10 ) {
+        //     console.log (i);
+        //     i++;
+       //
+        // for ( i = 1; i <= 10; i++) {
+        //     i = i + 1;
+        //     console.log (i);
+        // }
+
+
+        // var n = 2;
+        // if ( n < 2) {
+        //     console.log('Khong phai so nto');
+        // }
+        // var count = 0; 
+        // for (var i = 2; i < n; i++) {
+        //     if (n % i == 0) {
+        //         count++;
+        //     }
+        // }
+        // if (count == 0) {
+        //     console.log ('N la so nguyen to');
+        // } else {
+        //     console.log ('N khong la so nto');
+        // }
+
+
+        var n1 = 0;
+        var n2 = 1;
+        var _resul = "0 1 ";
+        for(var i =2; i<20;i++){
+        var tam = n2;
+        n2 = n1+n2;
+        n1 = tam;
+        if (n2%5==0) {
+            console.log (n2);
+           // break;
+        }
+        _resul = _resul + n2 + " ";
+    }
+    console.log (_resul);
+</script>
+</body>
+</html>

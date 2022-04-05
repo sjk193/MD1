@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(number){
+            let check ;
+            if(number <= 0 || number == 1){
+                check = 0;
+            }else if (number == 2){
+                check = 1;
+            }else{
+                for(let i = 2 ; i < number ; i++){
+                    if(number % i == 0 ){
+                        check = 0;
+                    }
+                }
+            }
+            if(check == 0){
+                return false;
+            }else {
+                return true;
+            }
+        }
+        let N = 2;
+        let count = 0;
+        let result = "" ;
+        do{
+            var numbers_input = parseInt(prompt("Nhập vào số lượng số nguyên tố cần hiển thị "));
+        }while(numbers_input < 1 || numbers_input > 20);
+        while(1){
+            if(isPrime(N) == true){
+                result += "-->" + N;
+                count++;
+            }
+            if(count >= numbers_input){
+                break;
+            }
+            N++;
+        }
+        alert("Số lượng số nguyên tố hiển thị là : " + result); 
+    </script>
+</body>
+</html>

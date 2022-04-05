@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Mobile(name,battery,mess,inbox,sendbox,status){
+        this.name = name;
+        this.battery =battery;
+        this.message = "";
+        this.inbox = "";
+        this.sendbox = "";
+        this.status = "off";
+    
+        // this.checkStatus = function(){
+        //     return this.status;
+        // }
+        // this.turnOnOff = function(statusIphone) {
+        //     if(statusIphone == "ON") {
+        //         this.status = true;
+        //     } else {
+        //         this.status = false;
+        //     }
+        // }
+        // this.charge = function(numberBattery){
+        //         this.battery = this.numberBattery + numberBattery;
+        //         if(this.battery >= 100){
+        //             this.battery = 100;
+        //         }
+        //     }
+        //     this.sentMessage = function() {
+        //         this.message = text;
+        //     }
+        
+
+    
+    
+    // let iPhone = new Mobile("Iphone", 80, "This is Iphone", [], [] , false);
+    // console.log(iPhone.status); // false
+    // iPhone.turnOnOff("ON")
+    // console.log(iPhone.status); // true?
+
+
+    // let nokia = new Mobile("Nokia", 50, "This is nokia", [], [], false);
+    // console.log(nokia.status);
+
+      // Chức năng kiểm tra trạng thái bật/tắt của điện thoại
+      this.getstatus = function(){
+                return this.status;
+            }
+            // Chức năng bật/tắt điện thoại
+            this.setstatus = function(status){
+                return this.status = status;
+            }
+            // Chức năng xem dung lượng pin
+            this.getbattery = function(){
+                return this.battery;
+            }
+            // Chức năng sạc pin
+            this.setbattery = function(battery){
+                return this.battery = battery;
+            }
+            // Chức năng soạn tin nhắn
+            this.setmessage = function(message){
+                if(this.status == "on"){
+                    this.setbattery(this.battery - 1);  
+                    return this.message = message;
+                }
+            }
+            // Chức năng hiển thị tin nhắn đang soạn
+            this.getmessage = function(){
+                if(this.status == "on"){
+                    this.setbattery(this.battery - 1);
+                    return this.message;
+                }
+            }
+            // Chức năng nhận tin nhắn
+            this.setinbox = function(message){
+                return this.inbox = message;
+            }
+            // Chức năng gửi tin nhắn cho điện thoại khác
+            this.sentmessage = function(message,phone){
+                if(this.status == "on"){
+                    this.setbattery(this.battery - 1);
+                    this.sendbox = message;
+                    return phone.setinbox(message);
+                }
+            }
+            // Chức năng kiểm tra hộp thư đến
+            this.getinbox = function(){
+                if(this.status == "on"){
+                    this.setbattery(this.battery - 1);
+                    return this.inbox;
+                }
+                
+            }
+            // Chức năng xem tin nhắn đã gửi 
+            this.getsendbox = function(){
+                if(this.status == "on"){
+                    this.setbattery(this.battery - 1);
+                    return this.sendbox;
+                }
+            }
+        }
+        let samsung = new Mobile(100);
+        let iphone = new Mobile(100);
+        console.log(samsung.getstatus());
+        console.log(iphone.getstatus());
+        samsung.setstatus("on");
+        iphone.setstatus("on");
+        samsung.sentmessage("Hello Iphone",iphone);
+        console.log(samsung.sendbox);
+        console.log(iphone.getinbox());
+
+</script>
+</html>

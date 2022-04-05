@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //5% 100tr, 10% 300tr, 20% hon 300tr 
+        var a = parseInt (prompt('Nhap doanh so ban hang (trieu) '));
+        
+        if (a >= 100 && a < 300) {
+           var hoahong = (5/100)*a;
+            alert ('Hoa hong nhan duoc la ' + hoahong + 'trieu');
+        } else if (a == 300) {
+            var hoahong = (10/100)*a;
+            alert ('Hoa hong nhan duoc la ' + hoahong + 'trieu');
+        } else if (a >= 300) {
+            var hoahong = (20/100)*a;
+            alert ('Hoa hong nhan duoc la ' + hoahong + 'trieu');
+        }
+    </script>
+</body>
+</html>

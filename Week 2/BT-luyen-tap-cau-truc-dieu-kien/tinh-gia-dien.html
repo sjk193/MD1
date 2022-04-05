@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gia dien</title>
+</head>
+<body>
+    <script>
+        //var sanluong = prompt ('Nhap san luong dien: ');
+        var sanluong = parseInt(prompt ('Nhap san luong dien: '));
+        var giadien;
+        if (sanluong > 0 && sanluong <= 50) {
+            giadien = sanluong * 1676;
+            alert ('Gia dien la: ' +giadien);
+        } else if (sanluong >51 && sanluong <= 100) {
+            giadien = sanluong * 1734;
+            alert ('Gia dien la: ' +giadien);
+        } else if (sanluong >101 && sanluong <= 200) {
+            giadien = sanluong * 2014;
+            alert ('Gia dien la: ' +giadien);
+        } else if (sanluong >201 && sanluong <= 300) {
+            giadien = sanluong * 2536;
+            alert ('Gia dien la: ' +giadien);
+        } else if (sanluong >301 && sanluong <= 400) {
+            giadien = sanluong * 2834;
+            alert ('Gia dien la: ' +giadien);
+        } else {
+            giadien = sanluong * 2927;
+            alert ('Gia dien la: ' +giadien);
+        }
+    </script>
+</body>
+</html>

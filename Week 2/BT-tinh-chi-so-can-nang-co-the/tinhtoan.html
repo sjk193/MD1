@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh chi so can nang co the</title>
+</head>
+<body>
+    <script>
+        let weight = prompt('Nhap can nang cua ban(kg): ');
+        let height = prompt('Nhap chieu cao cua ban(met): ');
+        let bmi = weight / ( height * height );
+        if (bmi < 18.5) {
+            alert ('BMI= ' + bmi);
+        } else if (bmi >= 18.5 && bmi < 25.0) {
+            alert ('Normal');
+        } else if (bmi >= 25.0 && bmi < 30.0) {
+            alert ('Overweight');
+        } else if (bmi >= 30.0) {
+            alert ('Obese');
+        }
+    </script>
+</body>
+</html>

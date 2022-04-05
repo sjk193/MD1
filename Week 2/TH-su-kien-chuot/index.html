@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su kien chuot</title>
+</head>
+<body>
+   <form>
+       <img  id="MyImage" src="https://media.istockphoto.com/photos/soccer-ball-isolated-on-the-white-background-picture-id610241662?s=612x612" alt="img"/>
+       <p>Click button below to move the image to right</p>
+       <input type="button" value="Click me" onclick = "moveRight();" />
+   </form> 
+   <script>
+       let a = null;
+            a= document.getElementById('MyImage');
+            function init() {
+                a = document.getElementById("MyImage");
+                a.style.position = 'relative';
+                a.style.left = '0px';
+            }
+            function moveRight () {
+                a.style.left = parseInt(a.style.left) + 10 +'px';
+            } 
+            window.onload = init;    
+   </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a =parseInt(prompt('Nhap a: '));
+        var b =parseInt(prompt('Nhap b: '));
+        var c =parseInt(prompt('Nhap c: '));
+        if (a > b) {
+            if (a > c) {
+                alert ('a lon nhat');
+            } else if (a == c) {
+                alert ('a va c lon nhat');
+            } else if (a < c) {
+                alert ('c lon nhat');
+            }
+        } else if (a == b) {
+            if (a < c) {
+                alert ('c lon nhat');
+            } else if (a > c) {
+                alert ('a va b lon nhat');
+            } else if (a == c) {
+                alert ('a,b,c bang nhau');
+            }
+        } else if (a < b) {
+            if (b < c) {
+                alert ('c lon nhat');
+            } else if (a == c) {
+                alert ('b lon nhat')
+            } else if (b == c) {
+                alert ('b va c lon nhat')
+            } else {
+                alert ('b lon nhat');
+            }
+        }
+    </script>
+</body>
+</html>

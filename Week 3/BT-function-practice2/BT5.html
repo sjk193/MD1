@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function min_numbers(numbers1,numbers2,numbers3){
+            if(numbers1 <= numbers2){
+                if(numbers1 <= numbers3){
+                    return numbers1;
+                }else{
+                    return numbers3;
+                }
+            }else{
+                if(numbers2 <= numbers3){
+                    return numbers2;
+                }else{
+                    return numbers3;
+                }
+            }
+        }
+        alert(min_numbers(2,3,1));
+    </script>
+</body>
+</html>

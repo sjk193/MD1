@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="idtext" type="text">;
+    <button onclick="mtofeet()">MToFeet</button>
+    <script>
+        function mtofeet() {
+            var a =document.getElementsById("idtext").value;
+            var m = parseInt(a);
+            var mtofeet = m * 3.2808;
+            alert ("Gia tri do feet la: " + mtofeet);
+            
+        }
+    </script>
+</body>
+</html>

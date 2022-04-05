@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr_value = [1,3,4,5,6,6,19,20];
+        let max = arr_value[0];
+        let result = 0;
+        let index = 0;
+        for (let i = 0; i < arr_value.length;i++) {
+       
+            if (max > arr_value[i]) {
+                
+            } else {
+               // index = i;
+                max = arr_value[i];
+            }
+            result += arr_value[i];
+        }
+        alert (`Phần tử có chỉ số ${index} có giá trị lớn nhất là: ${max}, trung bình của mảng là ${(result/arr_value.length).toFixed(1)}`);
+
+    </script>
+</body>
+</html>

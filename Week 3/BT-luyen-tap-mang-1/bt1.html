@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let array_value = [1,4,5,11,10,13,15,16,18,29,7,]
+        let count = 0;
+        let result = "" ;
+        for (let i = 0; i < array_value.length; i ++){
+            if (array_value[i] >= 10){
+                count ++;
+                result += i + " ";
+            }
+        }
+        alert(`Mảng có ${count} phần tử lớn hơn hoặc bằng 10 là : ${result}`)
+    </script>
+</body>
+</html>

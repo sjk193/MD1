@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Amount</label> <br>
+        <input type="text" id="idAmount" value="0"> <br>
+        <label>From</label> <br>
+        <select name="From" id="idFrom"> 
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+        </select> 
+        <label>To</label>
+        <select id="idTo">
+            <option value="vnd">VND</option>
+            <option value="usd">USD</option>
+        </select>
+        <button type="button" onclick="convertAmount()">Convert</button>
+    </form>
+</body>    
+    <script>
+        var _amount= document.getElementById('idAmount').value;
+        console.log(_amount);
+       /*  var _amount1= document.getElementById('idAmount1').innerText;
+        var _amount2= document.getElementById('idAmount2').innerText;
+        
+        console.log(_amount1);
+        console.log(_amount2); */
+
+        function convertAmount(){
+            var _amount= document.getElementById("idAmount").value;
+            var _from= document.getElementById("idFrom").value;
+            var _to= document.getElementById("idTo").value;
+            console.log(_from + "-->" + _to);
+            if (_from=='usd' && _to=='vnd') {
+                _amount = _amount*23000;
+                alert("Ket qua la: "+_amount);
+
+            }
+            if (_from=='usd' && _to=='usd') {
+               _amount =_amount;
+                alert("Ket qua la: "+_amount);
+            }
+            if (_from=='vnd' && _to=='usd') {
+                _amount = _amount/23000;
+                alert("Ket qua la: "+_amount);
+            }
+
+            if (_from=='vnd' && _to=='vnd') {
+                _amount = _amount;
+                alert("Ket qua la: "+_amount);
+            }
+        }    
+          //  alert("click suscess");
+         /*  var age=20;
+          if (age==20){
+            console.log('20');
+          else {
+              console.log('No')
+          }  
+          } */
+        /* } */
+       /*  var i=prompt('Nhap vao gia tri i');
+        if ( i<30 && i>20) {
+            console.log('Thanh nien');
+        } else {
+           
+            if i<20 && i>0 {
+                console.log('Con nit');
+            } else {
+                console.log('Gia roi');
+            }
+        } */
+
+    </script>
+</html>
