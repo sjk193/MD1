@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau 1</title>
+</head>
+<body>
+    <script>
+        function quadRatic(a,b,c){
+            let delta = b*b-4*a*c;
+            if (a==0){
+                return `Phương trình có nghiệm x =${-c/b}`;
+            } else {
+                if (delta<0){
+                    return `Phương trình vô nghiệm`;
+                }
+                if (delta>0){
+                    return `Phương trình có 2 nghiệm phân biệt là x1 = ${(-b + Math.sqrt(delta))/(2*a)} và x   2 = ${(-b - Math.sqrt(delta))/(2*a)}`;
+                }
+                if (delta == 0) {
+                    return `Phương trình có một nghiệm kép x = ${-b/(2*a)}`;
+                }
+            }
+        }
+        alert (quadRatic(8,12,-20));
+    </script>
+</html>

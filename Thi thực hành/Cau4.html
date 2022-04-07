@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau 4</title>
+</head>
+<body>
+<script>
+        function Staff(fullname, email) {
+        this.name = fullname;
+        this.email = email;
+       
+        this.setFullName = function(fullname) {
+            this.name = fullname;
+        }
+        this.setEmail = function(email) {
+            this.email = email;
+        }
+        this.getFullName = function() {
+            return this.name;
+        }
+        this.getEmail = function() {
+            return this.email;
+        }
+        this.toString = function() {
+            return `Tên của Staff là: ${this.name}, Email của Staff là: ${this.email}`
+        }
+        // this.toString = function() {
+        //     return `Fullname: ${this.fullname}, Email: ${this.email}`
+        // }
+    }
+        
+    let david = new Staff('David','david@gmail.com');
+    david.setFullName('David Do');
+    david.setEmail('david.do@gmail.com');
+    console.log(david.toString());
+    let Staffs = [
+            //new Staff("David", "david@gmail.com"),
+            david,
+            new Staff("Kevin", "kevin@gmail.com"),
+            new Staff("Klara", "klara@gmail.com"),
+        ]
+    for (let i = 0; i< Staffs.length; i++){
+        console.log(Staffs[i].toString());
+    }
+</script>
+</body>
+</html>

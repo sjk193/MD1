@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cau 2</title>
+</head>
+<body>
+    <script>
+        let arr =[5,6,3,1,7,9,-2];
+        function findIndex(number,arr){
+            for (i = 0; i < arr.length; i++){
+                if(arr[i] == number){
+                    return i;
+                }
+            }
+            return -1;
+        }
+       alert(findIndex(3,arr));
+    </script>
+</body>
+</html>
